@@ -33,7 +33,7 @@ df_postgres.show()
 # Check if there are extra rows in PostgreSQL
 if df_postgres.count() > 0:
     # Append new rows to Hive table
-    df_postgres.write.mode("append").format("hive").saveAsTable(hive_table_full_name)
+    df_postgres.write.mode("insert").format("hive").saveAsTable(hive_table_full_name)
     print("Appended {} new records to Hive table.".format(df_postgres.count()))
 else:
     print("No new rows in PostgreSQL table.")
