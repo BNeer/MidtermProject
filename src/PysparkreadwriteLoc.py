@@ -1,4 +1,6 @@
-# This code is meant for incremental load. The code will match the hive table rows with Postgres table based on a unique key a# nd append any additonal new record created in Postgres to Hive
+# This code is meant for incremental load. The code will match the hive table 
+# rows with Postgres table based on a unique key and append any additonal new record created 
+# in Postgres to Hive
 
 from pyspark.sql import SparkSession
 
