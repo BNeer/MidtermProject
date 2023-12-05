@@ -11,8 +11,10 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Hive table
-hive_database = "bduk_test1"
-hive_table_name = "location1"
+#hive_database = "bduk_test1"
+hive_database = "neeraj_weather"
+#hive_table_name = "location1"
+hive_table_name = "location"
 hive_table_full_name = "{}.{}".format(hive_database, hive_table_name)
 
 # Find the max(id) in the Hive table
